@@ -166,8 +166,9 @@ prompt_agnoster_setup() {
 
   zstyle ':vcs_info:*' enable git
   zstyle ':vcs_info:*' check-for-changes false
-  zstyle ':vcs_info:git*' formats '%b'
-  zstyle ':vcs_info:git*' actionformats '%b (%a)'
+  zstyle ':vcs_info:git*' formats '%u%c'
+  # TODO: Figure out how to set these to remove coloring
+  zstyle ':vcs_info:git*' actionformats '%u%c'
 }
 
 prompt_agnoster_setup "$@"
